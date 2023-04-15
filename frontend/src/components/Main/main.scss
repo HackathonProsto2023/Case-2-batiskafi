@@ -1,0 +1,68 @@
+.main{
+    flex-grow: 1;
+    min-height: 650px;
+}
+
+
+.main__content{
+    padding-top: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.main__logo {
+    font-weight: 800;
+    font-size: 150px;
+    text-transform: uppercase;
+    background: linear-gradient(-45deg, #52ee67, rgb(45, 155, 18), #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
+    display: inline-block;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.main__title{
+    padding: 12px;
+    max-width: 700px;
+    text-align: center;
+    font-weight: 600;
+    font-size:27px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.main__link{
+    padding: 20px 50px;
+    border-radius: 1000px;
+    //background: linear-gradient(-45deg, #2cb005, #1b9300);
+    background: #2cb005;
+    color: #e8e8e8;
+    font-weight: 500;
+    font-size:20px;
+    transition: all 1s ease;
+}
+
+.main__link:hover{
+    //background: linear-gradient(-45deg, #f5af00, #ee8e00);
+    background: #f5af00;
+}
