@@ -1,0 +1,26 @@
+.footer{
+    background-color: rgb(56, 52, 49);
+    height: 100px;
+}
+
+.footer__content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__list-item{
+    margin-bottom: 5px;
+    color: #e8e8e8;
+}
+
+.footer__link{
+    color: #e8e8e8;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer__link:hover{
+    color: rgba($color: rgb(255, 155, 18), $alpha: 1.0); 
+}
