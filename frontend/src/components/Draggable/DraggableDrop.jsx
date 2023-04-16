@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Draggable from 'react-draggable';
 import { useXarrow } from "react-xarrows";
 import MakeList from "../MakeList/MakeList";
@@ -8,10 +8,31 @@ import Modal from "../Modal/Modal";
 
 
 
+const Input = ({ onChange }) => {
+
+  const [value, setValue] = useState('');
+
+  const change = (e) => {
+    setValue(e.target.value);
+    onChange(e.target.value);
+  }
+
+  return (
+    <input 
+      className="modal__input" 
+      type="text" 
+      value={value}
+      placeholder="Поле для ввода" 
+      onChange={change}
+    />
+  );
+}
 
 const DraggableBox = ({ box }) => {
   const updateXarrow = useXarrow();
   const [modalActive, setModalActive] = useState(true)
+
+
   return (
     <div>
       <Draggable onDrag={updateXarrow} onStop={updateXarrow}>
@@ -31,14 +52,28 @@ const DraggableBox = ({ box }) => {
 
       </Draggable>
       <Modal active={modalActive} setActive={setModalActive}>
-        <form className="modal__form" action="submit" onSubmit={(e) =>
-        e.preventDefault()}>
-          {
-            box.columnName.map((val, index)=>
-              <input className="modal__input" type="text" placeholder="Поле для ввода" key={index}/>
-            )
+        <div className="table__title">
+          {box.tableName}
+        </div>
+        <form className="modal__form" action="submit" onSubmit={
+          (e) => {
+            e.preventDefault()
           }
-          <input className="modal__input" type="number" placeholder="Количество записей"/>
+        }>
+          
+          {
+            
+            box.columnName.map((val, index) => (
+              <Input
+                
+                /*onMount={() => setArr('')}*/
+                /*onChange={(v) => setSet(set.add(v))}*/
+                key={index}
+              />
+            ))
+
+          }
+          <input name="counter" className="modal__input" type="number" placeholder="Количество записей"/>
           <button className="modal__btn" type="submit">Сохранить</button>
         </form>
       </Modal>
@@ -46,6 +81,7 @@ const DraggableBox = ({ box }) => {
 
   );
 };
+
 
 const DraggableDrop = ({ tables }) => {
 

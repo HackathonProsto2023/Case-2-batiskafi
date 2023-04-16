@@ -1,11 +1,11 @@
 import Footer from '../Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
-import StartPage from '../../pages/StartPage';
-import DBPage from '../../pages/DBPage';
-import AboutProject from '../../pages/AboutProject'
-import Cooperation from '../../pages/Cooperation'
-import Contacts from '../../pages/Contacts'
+import StartPage from '../../pages/StartPage/StartPage';
+import DBPage from '../../pages/DBPage/DBPage';
+import AboutProject from '../../pages/AboutProject/AboutProject'
+import Cooperation from '../../pages/Cooperation/Cooperation'
+import Contacts from '../../pages/Contacts/Contacts'
 
 const RouteNav = function(){
   

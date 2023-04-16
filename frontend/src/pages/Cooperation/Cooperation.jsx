@@ -1,7 +1,11 @@
+import './cooperation.scss'
+
 function Cooperation() {
     return (
       <div className="main">
-          Cooperation
+          <div className="cooperation">
+          <h1>СПАСИБО</h1>
+          </div>
       </div>
     );
   }

@@ -1,0 +1,43 @@
+.about__wrapper{
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__title {
+    margin-top: 70px;
+    font-weight: 800;
+    font-size: 80px;
+    text-transform: uppercase;
+    background: linear-gradient(-45deg, #52ee67, rgb(45, 155, 18), #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
+    display: inline-block;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.about__text-p{
+    margin: 20px 0;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(56, 52, 49);
+}
