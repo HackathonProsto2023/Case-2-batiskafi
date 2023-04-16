@@ -1,0 +1,80 @@
+.database{
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.database__content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.database__aside{
+    height: auto;
+    width: 20%;
+    padding-top: 100px;
+    border-top-left-radius: 70px;
+    border-bottom-left-radius: 70px;
+    background: linear-gradient(-45deg, #40bf51, rgb(80, 203, 49), #23a6d5, #23d5ab);
+}
+
+.database__render{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.database__canvas{
+    height: 800px;
+}
+
+.database__aside-list{
+    color: #e8e8e8;
+    font-size: 20px;
+    margin: 10px 0 30px 10px;
+    cursor: pointer;
+    
+    transition: all 0.4s ease-in-out;
+}
+
+.database__btns{
+    border-top-right-radius: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: white;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.393);
+}
+
+.btn__generate,
+.btn__appload{
+    width: 310px;
+    height: 60px;
+    margin: 0 50px;
+    border-radius: 1000px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+    background: rgb(80, 203, 49);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.btn__generate:hover,
+.btn__appload:hover{
+    //background: #f5af00;
+}
+
+
+
+.database__aside-list:hover{
+    font-size: 22px;
+    font-weight: 600;
+}

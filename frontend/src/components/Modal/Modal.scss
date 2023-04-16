@@ -1,0 +1,56 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    width: 50vw;
+}
+
+.modal__content.active{
+    transform: scale(1);
+}
+
+.modal__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__input{
+    max-width: 50%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.5);
+    margin: 5px;
+}
+
+.modal__btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    background-color: rgba(101, 173, 13, 1);
+    color: #e8e8e8;
+}
