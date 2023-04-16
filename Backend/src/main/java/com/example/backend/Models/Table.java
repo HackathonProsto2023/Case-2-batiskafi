@@ -1,21 +1,21 @@
 package com.example.backend.Models;
 
-
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class Table {
 
     private String tableName;
-    private String[] columnName;
-    private String[] dataType;
-    private String[] constraintType;
-    private String[] references;
+    private List<String> columnName;
+    private List<String> dataType;
+    private List<String> constraintType;
+    private List<String> references;
 
-    public Table() {
-    }
+    public Table() { }
 
-    public Table(String tableName, String[] columnName, String[] dataType, String[] constraintType, String[] references) {
+    public Table(String tableName, List<String> columnName, List<String> dataType, List<String> constraintType, List<String> references) {
         this.tableName = tableName;
         this.columnName = columnName;
         this.dataType = dataType;
