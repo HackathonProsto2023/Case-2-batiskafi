@@ -22,7 +22,7 @@ public class Controller {
         Connection c = null;
         Statement statement = null;
         try {
-            c = DriverManager.getConnection("jdbc:postgresql://80.78.254.198:5432/prostoXsber",
+            c = DriverManager.getConnection("jdbc:postgresql://194.58.108.56:5432/prostoXsber",
                     "admin", "admin");
 
             c.setAutoCommit(false);
