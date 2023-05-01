@@ -5,24 +5,17 @@ import DBService from '../../API/DBService';
 import DraggableDrop from '../../components/Draggable/DraggableDrop';
 import Arrow from '../../components/Arrow/Arrow';
 import DataBaseAsideList from '../../components/DataBaseAsideList/DataBaseAsideList';
+import {inputData} from '../../storage/inputData'
 
 
-const canvasStyle = {
-  width: '100%',
-  height: '100%',
-  background: 'white',
-  overflow: 'hidden',
-  display: 'flex',
-  color: 'black',
-  borderBottomRightRadius: '70px',
-};
 
 function DBPage() {
 
   const [tables, setTables] = useState([])
 
   useEffect(()=>{
-    getData()
+    //getData()
+    setTables(inputData)
   }, [])
 
   async function getData(){
@@ -40,8 +33,8 @@ function DBPage() {
             </div>
             <div className="database__render">
               <div className="database__canvas">
-                <div style={canvasStyle} id="canvas">
-                  <Xwrapper > 
+                <div className='canvasStyle' id="canvas">
+                  <Xwrapper> 
                     <DraggableDrop tables={tables}/>
                     <Arrow tables={tables}/>
                   </Xwrapper>

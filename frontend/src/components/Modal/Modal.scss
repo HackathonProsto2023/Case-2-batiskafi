@@ -20,12 +20,22 @@
 }
 
 .modal__content{
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    overflow: auto;
+    height: 80vh;
     padding: 20px;
     border-radius: 12px;
     background-color: white;
     transform: scale(0.5);
     transition: 0.4s all;
     width: 50vw;
+}
+
+.modal__content::-webkit-scrollbar { /* webkit */
+    width: 0;
+    height: 0;
 }
 
 .modal__content.active{
@@ -36,10 +46,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    //height: 100%;
 }
 
 .modal__input{
-    max-width: 50%;
+    //max-width: 50%;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
