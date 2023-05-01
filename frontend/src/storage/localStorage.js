@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     { 
         "tableName": "position",
         "entryCount": 0,
@@ -30,7 +30,7 @@ const data = [
         "references":[]
     }, 
     { 
-        "tableName": "skill",
+        "tableName": "employee",
         "entryCount": 0,
         "columns":[{"employeeid": 0}, {"positionid": 0}, 
                     {"salary": 0 }, {"lengthofwork": 0},
@@ -38,3 +38,30 @@ const data = [
                     {"levelname": '' }],
         "references":["jobhistory","position","project"]
     }]
+
+    /*
+    { 
+        "tableName": "position",
+        "entryCount": 0,
+        "columns":[
+            { 
+                "columnName" : "positionid",
+                "rule" : "...",
+                "key" : "PK",
+                "reference" : ""
+            },
+            { 
+                "columnName" : "positionname",
+                "rule" : "...",
+                "key" : "".
+                "reference" : ""
+            }, 
+            { 
+                "columnName" : "skillid - FK",
+                "rule" : "...",
+                "key" : "FK",
+                "reference" : "skill.skillid - PK"
+            }
+            
+        ]
+    }, */
